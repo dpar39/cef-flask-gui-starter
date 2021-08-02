@@ -1,0 +1,13 @@
+{
+    "name": "cef-flask-gui-starter",
+    "description": "Demo project demonstrating python GUI app with Angular",
+    "author": "Darien Pardinas",
+    "license": "MIT",
+    "version": "1.0.0",
+    "scripts": {
+        "setup-env": "pip install virtualenv && python -m virtualenv env && call env\\Scripts\\activate.bat && pip install -r requirements.txt",
+        "build:gui": "pushd gui && ng build && popd",
+        "start": "python app.pyw", 
+        "build:exe": "pyinstaller --clean -F build-exe.spec"
+    }
+}

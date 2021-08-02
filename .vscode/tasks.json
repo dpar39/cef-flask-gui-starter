@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "linux": {
+        "options": {
+            "shell": {
+                "executable": "bash",
+                "args": [
+                    "--init-file",
+                    "env/bin/activate",
+                    "-ci",
+                ]
+            }
+        },
+    },
+    "windows": {
+        "options": {
+            "shell": {
+                "executable": "cmd.exe",
+                "args": [
+                    "/C",
+                    "env\\Scripts\\activate.bat",
+                    "&"
+                ]
+            }
+        }
+    },
+    "tasks": [
+        {
+            "label": "Build GUI",
+            "command": "npm run build:gui",
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": [],
+        },
+        {
+            "label": "Build EXE",
+            "command": "npm run build:exe",
+            "type": "shell",
+            "group": "build",
+            "problemMatcher": [],
+            "dependsOn": [
+                "Build GUI"
+            ]
+        }
+    ]
+}

@@ -1,4 +1,8 @@
 /www
+/env
 /blob_storage
 /webrtc_event_logs
 __pycache__
+*.spec
+/build
+/dist

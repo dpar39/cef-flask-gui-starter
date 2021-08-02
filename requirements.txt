@@ -1,0 +1,6 @@
+flask
+gevent
+pywin32
+cefpython3==66.1
+pyinstaller
+wxPython
